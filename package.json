@@ -4,7 +4,12 @@
   "description": "Dice baseball game",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server.js"
+    "server": "nodemon --exec babel-node server.js",
+    "browser": "cd browser && npm run start",
+    "build": "cd browser && npm run build && cd .. && babel server.js --out-dir dist",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run browser\"",
+    "serve": "node dist/server.js",
+    "launch": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -17,9 +22,11 @@
   },
   "homepage": "https://github.com/kaankabalak/dice-baseball-game#readme",
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
