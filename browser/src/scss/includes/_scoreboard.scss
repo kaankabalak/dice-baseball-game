@@ -1,0 +1,50 @@
+.scoreboard {
+  border-bottom: 1px solid black;
+  max-width: 360px;
+}
+
+.scoreboard__element {
+  display: inline-block;
+  text-align: center;
+  padding: 8px 0;
+  width: 30px;
+  border-right: 1px solid black;
+
+  &:first-of-type {
+    border-left: 1px solid black;
+    width: 60px;
+  }
+}
+
+.scoreboard__element--detail {
+  margin-right: 5px;
+  &:first-of-type {
+    width: 30px;
+  }
+}
+
+.scoreboard__statname--inning, .scoreboard__visitor, .scoreboard__home {
+  border-top: 1px solid black;
+}
+
+.scoreboard__inning, .scoreboard__statname {
+  font-weight: 700;
+}
+
+.scoreboard__top {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  max-width: 360px;
+}
+
+.scoreboard__detail {
+  display: inline-block;
+  margin-left: 10px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
