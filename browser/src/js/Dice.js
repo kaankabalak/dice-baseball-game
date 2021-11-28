@@ -54,7 +54,7 @@ const Dice = () => {
   return (
     <div className="dice">
       <div className="dice__outcome">
-        <button onClick={rollDices}>Roll!</button>
+        <button className="dice__button" onClick={rollDices}>Roll!</button>
         {dice1 !== 0 && dice2 !== 0 && (
           <div>
             You got {dice1}-{dice2}

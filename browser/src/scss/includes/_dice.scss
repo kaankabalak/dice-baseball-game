@@ -3,6 +3,15 @@
   justify-content: space-between;
 }
 
+.dice__button {
+  margin-bottom: 10px;
+}
+
+.dice__map {
+  position: relative;
+  top: -160px;
+}
+
 .outcomes__key {
   display: inline-block;
   width: 30px;
