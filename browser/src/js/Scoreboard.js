@@ -32,8 +32,8 @@ const Scoreboard = () => {
       </div>
       <div className="scoreboard__visitor">
         <div className="scoreboard__element">Visitor</div>
-        {[...Array(9).keys()].map((val) => (
-          <div className="scoreboard__element">{val + 1}</div>
+        {visitorScores.map((val) => (
+          <div className="scoreboard__element">{val !== null ? (val) : " "}</div>
         ))}
         <div className="scoreboard__element">
           {[...Array(9).keys()].reduce((prev, curr) => prev + curr)}
@@ -41,8 +41,8 @@ const Scoreboard = () => {
       </div>
       <div className="scoreboard__home">
         <div className="scoreboard__element">Home</div>
-        {[...Array(9).keys()].map((val) => (
-          <div className="scoreboard__element">{val + 1}</div>
+        {homeScores.map((val) => (
+          <div className="scoreboard__element">{val !== null ? (val) : " "}</div>
         ))}
         <div className="scoreboard__element">
           {[...Array(9).keys()].reduce((prev, curr) => prev + curr)}

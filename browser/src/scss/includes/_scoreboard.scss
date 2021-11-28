@@ -2,13 +2,16 @@
   border-bottom: 1px solid black;
   max-width: 360px;
   margin-bottom: 10px;
+  cursor: default;
 }
 
 .scoreboard__element {
   display: inline-block;
+  vertical-align: top;
   text-align: center;
   padding: 8px 0;
   width: 30px;
+  height: 36px;
   border-right: 1px solid black;
 
   &:first-of-type {
@@ -39,6 +42,15 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   max-width: 360px;
+}
+
+.scoreboard__statname {
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.scoreboard__statname--inning {
+  padding: 0;
 }
 
 .scoreboard__detail {
